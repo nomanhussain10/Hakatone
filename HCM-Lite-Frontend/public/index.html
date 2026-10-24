@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HCM Lite | Human Capital Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-icon">H</div><div><b>HCM Lite</b><small>People Management</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <button class="nav active" data-page="dashboard">▦ <span>Dashboard</span></button>
+    <button class="nav" data-page="employees">♙ <span>Employees</span></button>
+    <button class="nav" data-page="attendance">◷ <span>Attendance</span></button>
+    <button class="nav" data-page="leave">▤ <span>Leave Requests</span><em id="leaveBadge">2</em></button>
+    <button class="nav" data-page="payroll">＄ <span>Payroll</span></button>
+    <button class="nav" data-page="announcements">◉ <span>Announcements</span></button>
+    <div class="sidebar-bottom"><div class="help-card"><b>Need a hand?</b><p>Visit the help center for guidance.</p><button id="helpBtn">Open help center ↗</button></div><div class="profile"><div class="avatar">NH</div><div><b>Noman Hussain</b><small>HR Administrator</small></div><span>⌄</span></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb">Workspace <span>/</span> <b id="crumb">Dashboard</b></div><div class="top-actions"><span class="today" id="today"></span><button class="icon-btn" title="Notifications" id="notifyBtn">♧<i></i></button><div class="mini-avatar">NH</div></div></header>
+    <section class="content">
+      <div class="welcome"><div><p class="eyebrow">MONDAY, YOUR TEAM AT A GLANCE</p><h1 id="pageTitle">Good morning, Noman <span>✦</span></h1><p class="sub" id="pageSubtitle">Here's what's happening with your people today.</p></div><button class="primary" id="addEmployeeBtn">＋ Add employee</button></div>
+      <div id="pageContent"></div>
+    </section>
+  </main>
+  <div class="toast" id="toast"></div>
+  <dialog id="employeeDialog"><form id="employeeForm" method="dialog"><div class="modal-head"><div><h2>Add employee</h2><p>Add a team member to your directory.</p></div><button class="close" type="button" id="closeDialog">×</button></div><label>Full name<input name="name" required placeholder="e.g. Ayesha Khan"></label><div class="form-row"><label>Department<input name="department" required placeholder="e.g. Engineering"></label><label>Job title<input name="role" required placeholder="e.g. Software Engineer"></label></div><label>Email address<input name="email" type="email" required placeholder="name@company.com"></label><div class="modal-actions"><button class="secondary" type="button" id="cancelDialog">Cancel</button><button class="primary" type="submit">Save employee</button></div></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
